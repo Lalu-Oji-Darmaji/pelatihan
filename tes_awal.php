@@ -1,10 +1,9 @@
 <?php
+    $nama ='';
+    $email ='';
     if(isset($_POST["sumbit"])){
-        $nama = $_POST["nama"];
-        $email = $_POST["email"];
-
-        echo 'nama : '. $nama;
-        echo 'email : '. $email;
+        $nama = 'nama :'. $_POST["nama"];
+        $email = 'email :'. $_POST["email"];
     }
 ?>
 
@@ -30,6 +29,12 @@
         </label>
         <button type="sumbit" name="sumbit" onclick="kirim()">sumbit</button>
     </form>
+
+    <div>
+        <h2>Hasil input :</h2>
+        <p><?php echo $nama; ?></p>
+        <p><?php echo $email; ?></p>
+    </div>
 
     <script>
         function kirim(event) {
