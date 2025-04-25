@@ -16,6 +16,7 @@
     <title>Lalu Oji Darmaji</title>
 </head>
 <body>
+    <h1>Biodata saya</h1>
     <p>Nama : Lalu Oji Darmaji</p>
     <p>Jurusan : Sistem Informasi</p>
     <p>Minat : menggambar</p>
@@ -23,12 +24,33 @@
         <label for="nama">
             <input type="text" name="nama" placeholder="nama" required>
         </label>
-        <label for="nama">
+        <label for="email">
             <input type="email" name="email" placeholder="email" required>
         </label>
-        <button type="sumbit" name="sumbit">sumbit</button>
+        <button type="sumbit" name="sumbit" onclick="kirim()">sumbit</button>
     </form>
 
-    <p></p>
+    <script>
+        function kirim(event) {
+            const nama = document.forms[0]["nama"].value.trim();
+            const email = document.forms[0]["email"].value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (nama === "") {
+                alert("Nama tidak boleh kosong");
+            }
+
+            if (email === "") {
+                alert("Email tidak boleh kosong");
+                return false;
+            }
+
+            if (!emailPattern.test(email)) {
+                alert("Format email tidak valid");
+            }
+
+            return true;
+        }
+    </script>
 </body>
 </html>
