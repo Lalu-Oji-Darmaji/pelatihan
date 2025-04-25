@@ -16,7 +16,8 @@
     <title>Lalu Oji Darmaji</title>
 </head>
 <body>
-    <h1>Biodata saya</h1>
+    <h1>Halo,Saya Lalu Oji Darmaji</h1>
+    <h3>Biodata saya</h3>
     <p>Nama : Lalu Oji Darmaji</p>
     <p>Jurusan : Sistem Informasi</p>
     <p>Minat : menggambar</p>
